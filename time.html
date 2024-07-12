@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="time.css">
+</head>
+<body style="background: black;" >
+    <div class="d1"> 
+        <div>
+            <div class="d2">
+                <div id="time"></div>
+            </div>
+        </div>
+        <span></span>
+        <span></span>
+    </div>
+    <script>
+    function run() {
+        var today=new Date()
+        var hh=today.getHours()
+        var mm=today.getMinutes()
+        var ss=today.getSeconds()
+        if (hh>12) {
+            s=hh-12
+            n='PM'
+            console.log(n);
+            console.log(s);            
+        }
+        if (hh<12) {
+            n='AM'
+            console.log(n);
+            console.log(s);            
+
+
+
+            
+        }
+        var result=`${s}:${mm}:${ss}:${n}`
+
+        document.getElementById('time').innerHTML=result
+
+            
+        }
+        setInterval(run,1000)
+    </script>
+    
+</body>
+</html>
